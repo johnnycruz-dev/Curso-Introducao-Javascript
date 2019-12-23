@@ -1,0 +1,76 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Curso Javascript</title>
+	</head>
+	<body>
+
+		<script>
+			function Endereco() {
+				var endereco = {
+					rua: "Rua dos pinheiros",
+					numero: 1293,
+					bairro: "Centro",
+					cidade: "São Paulo",
+					uf: "SP"
+				}
+
+				console.log("O usuário mora em " + endereco.cidade + " / " + endereco.uf
+				+ ", no bairro " + endereco.bairro + ", na rua " + endereco.rua +
+				" n°: " + endereco.numero);
+			}
+
+			function pares(x,y) {
+				while(x <= y) {
+					if(x % 2 == 0) {
+						console.log(x);
+					}
+					x ++;
+				}
+			}
+
+			function temHabilidade(skills) {
+				if (skills.indexOf("Javascript") > -1) {
+					console.log(true);
+				} else {
+					console.log(false);
+				}
+			}
+
+			function experiencia(anos) {
+				if(anos < 1) console.log("Iniciante");
+				if(anos >= 1 && anos < 3) console.log("Intermediário");
+				if(anos >= 3 && anos <= 6) console.log("Avançado");
+				if(anos >= 7 ) console.log("Jedi Master");
+			}
+
+			function checaUsuarios() {
+				var usuarios = [
+					{
+						nome: "Diego",
+						habilidades: ["Javascript", "ReactJS", "Redux"]
+					},
+					{
+						nome: "Gabriel",
+						habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+					}
+				];
+
+				for (const iterator of usuarios) {
+					console.log(`O ${iterator.nome} possui as habilidades: ${iterator.habilidades.join(', ')}`);
+				}
+			}
+
+		/*temHabilidade ->
+			var skills = ["Javascript", "ReactJS", "React Native"];
+		*/
+		/*experiencia ->
+			var anosEstudo = 7;
+		*/
+			
+		//checaUsuarios();
+		//pares();
+		//Endereco();
+		</script>
+	</body>
+</html>
